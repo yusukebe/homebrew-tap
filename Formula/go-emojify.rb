@@ -11,7 +11,7 @@ class GoEmojify < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Darwin_x86_64_v0.1.5.tar.gz"
-      sha256 "e7c9f86c63378042512bf36484603698e478a52e6d7630acdf27e53c245d3482"
+      sha256 "4dd830ee7f6525efd6341bb05bf0354092e8442ccd9c5caf1e5bfeb94e589368"
 
       def install
         bin.install "go-emojify"
@@ -19,7 +19,7 @@ class GoEmojify < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Darwin_arm64_v0.1.5.tar.gz"
-      sha256 "49fb0413c7e8525094ceaced0d097538a0274cc89f2002b960142b8af896b0db"
+      sha256 "0268d9b4ce275ebdd1db21f041ef81b9418b4f9b51d94c27e1971358e3fae6e9"
 
       def install
         bin.install "go-emojify"
@@ -28,9 +28,17 @@ class GoEmojify < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Linux_arm_v0.1.5.tar.gz"
+      sha256 "c27341032be27f9098c46dfff08e73e9f097583a318a9ba6999cfa11f1bf931c"
+
+      def install
+        bin.install "go-emojify"
+      end
+    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Linux_arm64_v0.1.5.tar.gz"
-      sha256 "fb5ac7ea19def883ae771748a8ebcc07df944099d73dbc1e88626e3cab0882ca"
+      sha256 "f1857e61ccf5c9d3194e6d188acf33c7a8c1c75731b5eccb04da09528725929a"
 
       def install
         bin.install "go-emojify"
@@ -38,15 +46,7 @@ class GoEmojify < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Linux_x86_64_v0.1.5.tar.gz"
-      sha256 "bdcd7a4b8323a38de78322292fb8ff4762ae737afa781f6f89cb5a9cd9b30adc"
-
-      def install
-        bin.install "go-emojify"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Linux_arm_v0.1.5.tar.gz"
-      sha256 "6664df731c25050598723ee561cb6fbeb99f08ac34299924bae8e17d17590669"
+      sha256 "e79eba23284ff58f484da62bdf68f6cbfb2d7b045ba7d94cb421161ad9fd8e2a"
 
       def install
         bin.install "go-emojify"
