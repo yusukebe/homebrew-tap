@@ -9,17 +9,17 @@ class GoEmojify < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Darwin_x86_64_v0.1.5.tar.gz"
-      sha256 "4dd830ee7f6525efd6341bb05bf0354092e8442ccd9c5caf1e5bfeb94e589368"
+    if Hardware::CPU.arm?
+      url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Darwin_arm64_v0.1.5.tar.gz"
+      sha256 "f8f191133c3cd2c6f071b1d83b23943d29f0f760c4d08c6c1d30be0e36fb8d45"
 
       def install
         bin.install "go-emojify"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Darwin_arm64_v0.1.5.tar.gz"
-      sha256 "0268d9b4ce275ebdd1db21f041ef81b9418b4f9b51d94c27e1971358e3fae6e9"
+    if Hardware::CPU.intel?
+      url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Darwin_x86_64_v0.1.5.tar.gz"
+      sha256 "5e211541c58825afc4c0e26048880b51db9b0225f6f1a8aad00d8bc2ee189463"
 
       def install
         bin.install "go-emojify"
@@ -30,15 +30,7 @@ class GoEmojify < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Linux_arm_v0.1.5.tar.gz"
-      sha256 "c27341032be27f9098c46dfff08e73e9f097583a318a9ba6999cfa11f1bf931c"
-
-      def install
-        bin.install "go-emojify"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Linux_arm64_v0.1.5.tar.gz"
-      sha256 "f1857e61ccf5c9d3194e6d188acf33c7a8c1c75731b5eccb04da09528725929a"
+      sha256 "461e9ede60e0864a358b3f31c2ad4e39eff2319c565bd1e6874c768ac11c6429"
 
       def install
         bin.install "go-emojify"
@@ -46,7 +38,15 @@ class GoEmojify < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Linux_x86_64_v0.1.5.tar.gz"
-      sha256 "e79eba23284ff58f484da62bdf68f6cbfb2d7b045ba7d94cb421161ad9fd8e2a"
+      sha256 "3203dad450b13c9a6d25d05793024ced2f65b201f658c42ad923fc314842704a"
+
+      def install
+        bin.install "go-emojify"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/yusukebe/go-emojify/releases/download/v0.1.5/go-emojify_Linux_arm64_v0.1.5.tar.gz"
+      sha256 "010bff7ce73fa9ae38ef3a2c6e150696d994ed603caa099df9ae75a6f8e68cae"
 
       def install
         bin.install "go-emojify"
