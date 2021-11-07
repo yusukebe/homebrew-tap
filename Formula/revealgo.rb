@@ -11,7 +11,7 @@ class Revealgo < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/yusukebe/revealgo/releases/download/v1.2.1/revealgo_1.2.1_macOS-ARM64.tar.gz"
-      sha256 "38e61bf25020730b0f7d76dfd9a83bfe51ccc76e7f98ab8b7e51ea57c7e2321c"
+      sha256 "3a5d1f3a718cec97786fc7f53376d0df6332942c1c1bf6f0eef95bddefc11f1a"
 
       def install
         bin.install "revealgo"
@@ -19,7 +19,7 @@ class Revealgo < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/yusukebe/revealgo/releases/download/v1.2.1/revealgo_1.2.1_macOS-64bit.tar.gz"
-      sha256 "680396e8c1e920905efdee861cac8c743e6b19016df91d01e248f682dcdc4576"
+      sha256 "9f30f80e685197ce3d33f181c7111ceb9da7b6d5a031c7e4d5322e52d45f3eb4"
 
       def install
         bin.install "revealgo"
@@ -28,9 +28,9 @@ class Revealgo < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/yusukebe/revealgo/releases/download/v1.2.1/revealgo_1.2.1_Linux-ARM.tar.gz"
-      sha256 "a5706a407c34eeca0bb3e45ae857c78ac43a9070f51434641ed4310f074ea16e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/yusukebe/revealgo/releases/download/v1.2.1/revealgo_1.2.1_Linux-ARM64.tar.gz"
+      sha256 "765a504ccc1ee040183cded30138a81979dd0be1e79d56d01063d32931824b50"
 
       def install
         bin.install "revealgo"
@@ -38,15 +38,15 @@ class Revealgo < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/yusukebe/revealgo/releases/download/v1.2.1/revealgo_1.2.1_Linux-64bit.tar.gz"
-      sha256 "becfd273ec22d686e5ffecc9091fec0d06bf32deff928ebda3751e7db9c7209e"
+      sha256 "caf342cc59b6a1063d27d46b1060b34f47b2794d1fd7eca052966a166aaebb0b"
 
       def install
         bin.install "revealgo"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yusukebe/revealgo/releases/download/v1.2.1/revealgo_1.2.1_Linux-ARM64.tar.gz"
-      sha256 "915ff2ac58fb63efc85a8a57e78627a02b69c3a9004f2bf592ca42c4504e6eb3"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/yusukebe/revealgo/releases/download/v1.2.1/revealgo_1.2.1_Linux-ARM.tar.gz"
+      sha256 "e1ba8eb66d2a4ae953d9bfbe49ca94e2266addf960da2605fbf8eb6ef0fb4d36"
 
       def install
         bin.install "revealgo"
