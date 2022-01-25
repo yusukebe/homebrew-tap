@@ -5,21 +5,21 @@
 class Rj < Formula
   desc "CLI for printing HTTP Response as JSON."
   homepage "https://github.com/yusukebe/rj"
-  version "0.0.8"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/yusukebe/rj/releases/download/v0.0.8/rj_darwin_arm64.tar.gz"
-      sha256 "03b68cf086f8d2dfbfe041153b9e434e0850bf3640c268ca4080aa43ac7ccc82"
+      url "https://github.com/yusukebe/rj/releases/download/v0.1.0/rj_darwin_arm64.tar.gz"
+      sha256 "abcd1784c59b762b05a3f0d44e61994df7577f3ea5aa4318530a3453e9d1bb6e"
 
       def install
         bin.install "rj"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/yusukebe/rj/releases/download/v0.0.8/rj_darwin_amd64.tar.gz"
-      sha256 "b9c5b274ebe2b4173942c381dbbed05ff80d53e1830f31b27dc3f0e8fa654bb8"
+      url "https://github.com/yusukebe/rj/releases/download/v0.1.0/rj_darwin_amd64.tar.gz"
+      sha256 "ca11e99ccdc1b1d1acb5ca9344b44176956c8460e4beecd3badb76e42c06f6b1"
 
       def install
         bin.install "rj"
@@ -29,16 +29,16 @@ class Rj < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yusukebe/rj/releases/download/v0.0.8/rj_linux_arm64.tar.gz"
-      sha256 "8df6525f1bac39720465a03ad66436f447de42682a2ce98a2acded1c4a853fda"
+      url "https://github.com/yusukebe/rj/releases/download/v0.1.0/rj_linux_arm64.tar.gz"
+      sha256 "f9f43b1b4807c967ff81a262fcff4e5bf863ee616cd25f63f543185a04c44283"
 
       def install
         bin.install "rj"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/yusukebe/rj/releases/download/v0.0.8/rj_linux_amd64.tar.gz"
-      sha256 "6ebc5b33a108b2c7e6c8c7b8144961f40c1dd12403b2c4f197bacc973f78670f"
+      url "https://github.com/yusukebe/rj/releases/download/v0.1.0/rj_linux_amd64.tar.gz"
+      sha256 "bb7149a83163f17de32474d3491a98b540d64ff698a3cbd38498f23ece672e5a"
 
       def install
         bin.install "rj"
