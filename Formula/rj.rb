@@ -11,7 +11,7 @@ class Rj < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/yusukebe/rj/releases/download/v0.1.1/rj_darwin_arm64.tar.gz"
-      sha256 "4cce214c8e9415acbac0bf361afa17f55b85c11d5de4c1ccf44ea30ad3e68e39"
+      sha256 "62c3041da033291e93ff59c104a4c766cc8199bcf058f3a384f2701c3d7e0f92"
 
       def install
         bin.install "rj"
@@ -19,7 +19,7 @@ class Rj < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/yusukebe/rj/releases/download/v0.1.1/rj_darwin_amd64.tar.gz"
-      sha256 "9eb35dd2181eeafbc6f67bdfe3e24b457066531c725056527c951d14fc1407d8"
+      sha256 "01b740f2fb1806c355ce8b27994766c880e88cfebf6b5a3134b0283ea56ed3bf"
 
       def install
         bin.install "rj"
@@ -30,7 +30,7 @@ class Rj < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/yusukebe/rj/releases/download/v0.1.1/rj_linux_arm64.tar.gz"
-      sha256 "75cfb7591680b9947bdccf674890758fe07a98aadc81b50af366eb3a08a7d4b4"
+      sha256 "54c92cf8f428626da11323ff5dbdf6066274b38bf8562b6872dc3d82cc441042"
 
       def install
         bin.install "rj"
@@ -38,7 +38,7 @@ class Rj < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/yusukebe/rj/releases/download/v0.1.1/rj_linux_amd64.tar.gz"
-      sha256 "6e2f0195e12e5fbd73de4ec75872642844fe8976a17358a4a563b8e8347c4ea9"
+      sha256 "bebd601821a1173a4bd4762ca2982a347c4e289116f9f5501518047b9cf27a04"
 
       def install
         bin.install "rj"
