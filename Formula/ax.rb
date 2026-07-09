@@ -1,26 +1,26 @@
 class Ax < Formula
   desc "The AI-era curl: fetch, discover, extract. One command."
   homepage "https://ax.yusuke.run"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/yusukebe/ax/releases/download/v0.1.1/ax-darwin-arm64"
-      sha256 "9aa77eda713aa3247f58c71b2defa61e039a055c1db7e4726878e9f973ed3f70"
+      url "https://github.com/yusukebe/ax/releases/download/v0.1.2/ax-darwin-arm64"
+      sha256 "9467e11c809c7f63c54dcbfc7a2fe55dfeb84ca4dce3987bd63ddbf0cc698fda"
     else
-      url "https://github.com/yusukebe/ax/releases/download/v0.1.1/ax-darwin-x64"
-      sha256 "9fff72cbf6f18c11859afada703c2264383d17283071a95dab80f5472bc4fecd"
+      url "https://github.com/yusukebe/ax/releases/download/v0.1.2/ax-darwin-x64"
+      sha256 "83d5cf10f62b68f1b4f0c8166047aef72b8639bf463e3fadd3c1f982df1e6533"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/yusukebe/ax/releases/download/v0.1.1/ax-linux-arm64"
-      sha256 "ffd28ba933354d0012da2226773fba3be4810f190a8f90a3a9fbf2e99db7a59b"
+      url "https://github.com/yusukebe/ax/releases/download/v0.1.2/ax-linux-arm64"
+      sha256 "99c272e2cf6c7f534bb6d71d0ad6d2804d41c575866668cdbfb3868593bb6450"
     else
-      url "https://github.com/yusukebe/ax/releases/download/v0.1.1/ax-linux-x64"
-      sha256 "3d4d97de30fcc4587b9722fa87892597ca2247fd2076f797f2b0f4467d4f9def"
+      url "https://github.com/yusukebe/ax/releases/download/v0.1.2/ax-linux-x64"
+      sha256 "b46439dca0f5b2d206cf401203f7d6f77f9bcd05bf4a1780356fbb2c5d72a5e4"
     end
   end
 
